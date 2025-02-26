@@ -23,7 +23,7 @@ jobs:
         run: bun install
 
       - name: Run linter
-        run: bun run lint --quiet
+        run: bun run lint
 
   test:
     name: Run Tests
