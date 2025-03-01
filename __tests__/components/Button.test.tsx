@@ -1,0 +1,32 @@
+import { render, screen, fireEvent } from "@testing-library/react";
+import { Button } from "@/components/Button";
+
+describe("Button component", () => {
+  test("calls onClick when clicked", () => {
+    const handleClick = jest.fn();
+
+    render(<Button onClick={handleClick}>Click me</Button>);
+
+    const button = screen.getByRole("button", { name: "Click me" });
+
+    fireEvent.click(button);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  test("does not call onClick when disabled", () => {
+    const handleClick = jest.fn();
+
+    render(
+      <Button disabled onClick={handleClick}>
+        Click me
+      </Button>,
+    );
+
+    const button = screen.getByRole("button", { name: "Click me" });
+
+    fireEvent.click(button);
+
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+});

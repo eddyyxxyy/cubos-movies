@@ -7,7 +7,7 @@ function getColorScale(name: string): TColorScale {
   const scale: TColorScale = {};
 
   for (let i = 1; i <= 12; i++) {
-    scale[i] = `var(--${name}-${i})`;
+    scale[i] = `rgb(from var(--${name}-${i}) r g b / <alpha-value>)`;
   }
 
   return scale;

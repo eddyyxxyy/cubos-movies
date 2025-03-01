@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
+    "clsx": "^2.1.1",
+    "js-cookie": "^3.0.5",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -37,10 +39,12 @@
     "@commitlint/cz-commitlint": "^19.6.1",
     "@eslint/eslintrc": "^3",
     "@stylistic/eslint-plugin": "^4.0.1",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/jest": "^29.5.14",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
