@@ -12,6 +12,8 @@ const config: Config = {
   testEnvironment: "jsdom",
   moduleNameMapper: {
     "^@/components/(.*)$": "<rootDir>/src/components/$1",
+    "^@/assets/(.*)$": "<rootDir>/src/assets/$1",
+    "^.+\\.(svg)$": "<rootDir>/__mocks__/svg.jsx",
   },
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
